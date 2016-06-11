@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :itineraries, foreign_key: :creator_id
+  has_many :activities, through: :itineraries
+
   has_secure_password
 
   validates :username, :email, presence: true

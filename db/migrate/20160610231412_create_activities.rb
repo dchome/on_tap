@@ -1,7 +1,6 @@
 class CreateActivities < ActiveRecord::Migration
   def change
     create_table :activities do |t|
-      t.integer :owner_id
       t.string :name, null: false
       t.string :description
       t.string :address_line_1
